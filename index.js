@@ -7,7 +7,9 @@ module.exports = {
   rules: allRules,
   configs: {
     recommended: {
-      plugin: [],
+      plugin: [
+        'volkmann'
+      ],
       parserOptions: {
         ecmaFeatures: {}
       },
