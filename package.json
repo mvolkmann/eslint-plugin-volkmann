@@ -1,0 +1,24 @@
+{
+  "name": "eslint-plugin-volkmann",
+  "version": "0.0.0",
+  "description": "for learning how to write plugins",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "R. Mark Volkmann",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "~2.6.0",
+    "mocha": "^2.4.5"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "ISC"
+}
