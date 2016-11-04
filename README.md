@@ -1,6 +1,6 @@
 # eslint-plugin-volkmann
 
-for learning how to write plugins
+Mark Volkmann's collection of ESLint plugins
 
 ## Installation
 
@@ -30,17 +30,16 @@ Add `volkmann` to the plugins section of your `.eslintrc` configuration file. Yo
 }
 ```
 
-
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
     "rules": {
-        "volkmann/rule-name": 2
+        "volkmann/rule-name": "error"
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
+* embrace-booleans
