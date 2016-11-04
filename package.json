@@ -9,7 +9,7 @@
   ],
   "author": "R. Mark Volkmann",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests/lib/rules"
   },
   "dependencies": {
   },
