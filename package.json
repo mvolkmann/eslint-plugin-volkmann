@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-volkmann",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "for learning how to write plugins",
   "keywords": [
     "eslint",
@@ -12,6 +12,7 @@
     "type" : "git",
     "url" : "https://github.com/mvolkmann/eslint-plugin-volkmann.git"
   },
+  "main": "index.js",
   "scripts": {
     "test": "mocha tests/lib/rules"
   },
