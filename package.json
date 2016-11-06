@@ -1,20 +1,22 @@
 {
   "name": "eslint-plugin-volkmann",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "for learning how to write plugins",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "R. Mark Volkmann",
+  "author": {
+    "name": "R. Mark Volkmann",
+    "email": "r.mark.volkmann@gmail.com"
+  },
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/mvolkmann/eslint-plugin-volkmann.git"
   },
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha tests/lib/rules"
+  "bugs": {
+    "url" : "https://github.com/mvolkmann/eslint-plugin-volkmann/issues"
   },
   "dependencies": {
   },
@@ -24,6 +26,10 @@
   },
   "engines": {
     "node": ">=6"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/lib/rules"
   },
   "license": "ISC"
 }

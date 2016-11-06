@@ -14,7 +14,8 @@ const error = {
 
 ruleTester.run(ruleName, rule, {
   valid: [
-    'someCondition'
+    'someCondition',
+    "someCondition ? 'red' : 'green'"
   ],
   invalid: [
     {

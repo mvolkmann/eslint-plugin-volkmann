@@ -24,7 +24,7 @@ module.exports = {
       parserOptions: {
         ecmaFeatures: {}
       },
-      rules: allRules
+      rules: {'volkmann/embrace-booleans': 2}
     }
   }
 };
