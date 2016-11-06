@@ -1,17 +1,16 @@
-const allRules = {
-  'embrace-boolean': require('./lib/rules/embrace-boolean')
-};
 
 module.exports = {
   deprecatedRules: [],
-  rules: allRules,
+  rules: {
+    'embrace-booleans': require('./lib/rules/embrace-booleans')
+  },
   configs: {
     recommended: {
       plugin: [
         'volkmann'
       ],
       parserOptions: {
-        ecmaFeatures: {}
+        ecmaFeatures: {ecmaVersion: 6: sourceType: 'module'}
       },
       rules: {
         'volkmann/embrace-booleans': 2
