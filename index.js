@@ -5,7 +5,7 @@ module.exports = {
   configs: {
     all: {
       parserOptions: {
-        ecmaFeatures: {ecmaVersion: 6: sourceType: 'module'}
+        ecmaVersion: 6
       },
       rules: {
         'volkmann/embrace-booleans': 2
