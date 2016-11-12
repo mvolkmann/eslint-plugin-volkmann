@@ -10,8 +10,8 @@ const ruleTester = new RuleTester();
 
 ruleTester.run(ruleName, rule, {
   valid: [
-    'x ** 2',
-    'x ** 3'
+    {code: 'x ** 2', parserOptions: {ecmaVersion: 7}},
+    {code: 'x ** 3', parserOptions: {ecmaVersion: 7}}
   ],
   invalid: [
     {
