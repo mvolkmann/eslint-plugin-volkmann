@@ -10,15 +10,18 @@ const ruleTester = new RuleTester();
 
 ruleTester.run(ruleName, rule, {
   valid: [
-    'Math.pow(x, 2)',
-    'Math.pow(x, 3)'
+    //'Math.pow(x, 2)',
+    //'Math.pow(x, 3)'
+    'x ** 2',
+    'x ** 3'
   ],
   invalid: [
     {
       code: 'x * x',
       errors: [
         {
-          message: 'prefer Math.pow(x, 2) over multiplication',
+          //message: 'prefer Math.pow(x, 2) over multiplication',
+          message: 'prefer x ** 2 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -27,7 +30,8 @@ ruleTester.run(ruleName, rule, {
       code: 'x * x * x',
       errors: [
         {
-          message: 'prefer Math.pow(x, 3) over multiplication',
+          //message: 'prefer Math.pow(x, 3) over multiplication',
+          message: 'prefer x ** 3 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -36,7 +40,8 @@ ruleTester.run(ruleName, rule, {
       code: 'x * x * x * x',
       errors: [
         {
-          message: 'prefer Math.pow(x, 4) over multiplication',
+          //message: 'prefer Math.pow(x, 4) over multiplication',
+          message: 'prefer x ** 4 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -45,7 +50,8 @@ ruleTester.run(ruleName, rule, {
       code: 'x * x * y',
       errors: [
         {
-          message: 'prefer Math.pow(x, 2) over multiplication',
+          //message: 'prefer Math.pow(x, 2) over multiplication',
+          message: 'prefer x ** 2 over multiplication',
           type: 'BinaryExpression'
         }
       ]
