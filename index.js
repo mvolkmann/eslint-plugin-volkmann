@@ -1,3 +1,5 @@
+/* global module */
+
 module.exports = {
   rules: {
     /* eslint-disable global-require */
@@ -10,8 +12,8 @@ module.exports = {
         ecmaVersion: 7
       },
       rules: {
-        'volkmann/embrace-booleans': 2,
-        'volkmann/exponentiation-operator': 2
+        'volkmann/embrace-booleans': 'error',
+        'volkmann/exponentiation-operator': 'error'
       }
     }
   }

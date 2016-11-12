@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-volkmann",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "for learning how to write plugins",
   "keywords": [
     "eslint",
@@ -21,7 +21,10 @@
   "dependencies": {},
   "devDependencies": {
     "babel-preset-es2016": "^6.16.0",
-    "eslint": "~3.9.1",
+    "eslint": "^3.9.1",
+    "eslint-find-rules": "^1.14.3",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-react": "^6.6.0",
     "mocha": "^3.1.2"
   },
   "engines": {
@@ -29,6 +32,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "efr": "eslint-find-rules --unused ~/.eslintrc.json --no-error",
     "test": "mocha tests/lib/rules"
   },
   "license": "ISC"
