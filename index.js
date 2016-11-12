@@ -1,5 +1,6 @@
 module.exports = {
   rules: {
+    /* eslint-disable global-require */
     'embrace-booleans': require('./lib/rules/embrace-booleans'),
     'exponentiation-operator': require('./lib/rules/exponentiation-operator')
   },
