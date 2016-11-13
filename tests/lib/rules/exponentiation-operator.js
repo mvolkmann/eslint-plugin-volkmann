@@ -50,7 +50,25 @@ ruleTester.run(ruleName, rule, {
           type: 'BinaryExpression'
         }
       ]
-    }
+    },
+    {
+      code: 'Math.pow(x, 2)',
+      errors: [
+        {
+          message: 'prefer x**2',
+          type: 'CallExpression'
+        }
+      ]
+    },
+    {
+      code: 'Math.pow(x * y, a + b)',
+      errors: [
+        {
+          message: 'prefer (x * y)**(a + b)',
+          type: 'CallExpression'
+        }
+      ]
+    },
     /*
     {
       // This doesn't work because the BinaryExpression y * x
