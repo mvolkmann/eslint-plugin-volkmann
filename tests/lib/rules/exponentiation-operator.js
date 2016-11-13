@@ -25,7 +25,7 @@ ruleTester.run(ruleName, rule, {
     },
     {
       code: 'x * x * x',
-      options: [{spaceAround: true}],
+      options: ['spaceAround'],
       errors: [
         {
           message: 'prefer x ** 3 over multiplication',
