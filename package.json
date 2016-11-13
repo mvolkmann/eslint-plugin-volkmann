@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-volkmann",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "for learning how to write plugins",
   "keywords": [
     "eslint",

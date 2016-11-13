@@ -10,15 +10,15 @@ const ruleTester = new RuleTester();
 
 ruleTester.run(ruleName, rule, {
   valid: [
-    {code: 'x ** 2', parserOptions: {ecmaVersion: 7}},
-    {code: 'x ** 3', parserOptions: {ecmaVersion: 7}}
+    {code: 'x**2', parserOptions: {ecmaVersion: 7}},
+    {code: 'x**3', parserOptions: {ecmaVersion: 7}}
   ],
   invalid: [
     {
       code: 'x * x',
       errors: [
         {
-          message: 'prefer x ** 2 over multiplication',
+          message: 'prefer x**2 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -27,7 +27,7 @@ ruleTester.run(ruleName, rule, {
       code: 'x * x * x',
       errors: [
         {
-          message: 'prefer x ** 3 over multiplication',
+          message: 'prefer x**3 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -36,7 +36,7 @@ ruleTester.run(ruleName, rule, {
       code: 'x * x * x * x',
       errors: [
         {
-          message: 'prefer x ** 4 over multiplication',
+          message: 'prefer x**4 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -45,7 +45,7 @@ ruleTester.run(ruleName, rule, {
       code: 'x * x * y',
       errors: [
         {
-          message: 'prefer x ** 2 over multiplication',
+          message: 'prefer x**2 over multiplication',
           type: 'BinaryExpression'
         }
       ]
@@ -57,7 +57,7 @@ ruleTester.run(ruleName, rule, {
       code: 'y * x * x',
       errors: [
         {
-          message: 'prefer x ** 2 over multiplication',
+          message: 'prefer x**2 over multiplication',
           type: 'BinaryExpression'
         }
       ]
