@@ -25,9 +25,10 @@ ruleTester.run(ruleName, rule, {
     },
     {
       code: 'x * x * x',
+      options: [{spaceAround: true}],
       errors: [
         {
-          message: 'prefer x**3 over multiplication',
+          message: 'prefer x ** 3 over multiplication',
           type: 'BinaryExpression'
         }
       ]
