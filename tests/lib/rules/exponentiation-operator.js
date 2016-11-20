@@ -51,6 +51,19 @@ ruleTester.run(ruleName, rule, {
         }
       ]
     },
+    /*
+    {
+      // This doesn't work because the BinaryExpression y * x
+      // doesn't get processed because y and x are different names.
+      code: 'y * x * x',
+      errors: [
+        {
+          message: 'prefer x**2 over multiplication',
+          type: 'BinaryExpression'
+        }
+      ]
+    },
+    */
     {
       code: 'Math.pow(x, 2)',
       errors: [
@@ -68,19 +81,6 @@ ruleTester.run(ruleName, rule, {
           type: 'CallExpression'
         }
       ]
-    },
-    /*
-    {
-      // This doesn't work because the BinaryExpression y * x
-      // doesn't get processed because y and x are different names.
-      code: 'y * x * x',
-      errors: [
-        {
-          message: 'prefer x**2 over multiplication',
-          type: 'BinaryExpression'
-        }
-      ]
     }
-    */
   ]
 });
