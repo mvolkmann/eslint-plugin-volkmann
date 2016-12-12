@@ -21,7 +21,8 @@ ruleTester.run(ruleName, rule, {
           message: 'prefer x**2 over multiplication',
           type: 'BinaryExpression'
         }
-      ]
+      ],
+      output: 'x**2'
     },
     {
       code: 'x * x * x',
@@ -31,7 +32,8 @@ ruleTester.run(ruleName, rule, {
           message: 'prefer x ** 3 over multiplication',
           type: 'BinaryExpression'
         }
-      ]
+      ],
+      output: 'x ** 3'
     },
     {
       code: 'x * x * x * x',
@@ -40,7 +42,8 @@ ruleTester.run(ruleName, rule, {
           message: 'prefer x**4 over multiplication',
           type: 'BinaryExpression'
         }
-      ]
+      ],
+      output: 'x**4'
     },
     {
       code: 'x * x * y',
@@ -49,7 +52,8 @@ ruleTester.run(ruleName, rule, {
           message: 'prefer x**2 over multiplication',
           type: 'BinaryExpression'
         }
-      ]
+      ],
+      output: 'x**2 * y'
     },
     /*
     {
@@ -71,7 +75,8 @@ ruleTester.run(ruleName, rule, {
           message: 'prefer x**2',
           type: 'CallExpression'
         }
-      ]
+      ],
+      output: 'x**2'
     },
     {
       code: 'Math.pow(x * y, a + b)',
@@ -80,7 +85,8 @@ ruleTester.run(ruleName, rule, {
           message: 'prefer (x * y)**(a + b)',
           type: 'CallExpression'
         }
-      ]
+      ],
+      output: '(x * y)**(a + b)'
     }
   ]
 });
