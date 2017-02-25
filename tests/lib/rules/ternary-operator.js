@@ -26,6 +26,7 @@ ruleTester.run(ruleName, rule, {
   //TODO: and reformatted even if it is already formatted correctly.
   valid: [
     {code: 'const a = b ? c : d;', parserOptions: {ecmaVersion: 7}},
+    {code: 'const a = b ? (c ? d : e) : f;', parserOptions: {ecmaVersion: 7}},
     {code: goodCode, parserOptions: {ecmaVersion: 7}},
   ],
   invalid: [
@@ -42,9 +43,9 @@ ruleTester.run(ruleName, rule, {
     },
     {
       code: `const a = b
-               ? c\n
-               : d\n
-                   ? e\n
+               ? c
+               : d
+                   ? e
                    : f;`,
       parserOptions: {ecmaVersion: 7},
       errors: [
