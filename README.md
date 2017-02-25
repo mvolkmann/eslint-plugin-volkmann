@@ -43,3 +43,20 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * embrace-booleans
+* exponentiation-operator
+* ternary-operator
+
+## Debugging tips
+
+When testing a new rule that has not been deployed to npm yet,
+add configuration of the rule to `.eslintrc.json`
+in the project root directory like this:
+````
+"exponentiation-operator": ["error"],
+````
+and run this from the project root directory:
+````
+eslint --no-ignore --rulesdir lib/rules sample-code/file-to-test.js
+````
+The `--no-ignore` option is necessary because the `.eslintignore` file
+ignores all files in the `sample-code` directory.
