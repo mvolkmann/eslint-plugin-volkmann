@@ -38,7 +38,22 @@ ruleTester.run(ruleName, rule, {
           type: 'VariableDeclaration'
         }
       ],
-      output: 'const a =\n  b ? c :\n  d;'
+      output: 'const a = b ? c : d;'
+    },
+    {
+      code: `const a = b
+               ? c\n
+               : d\n
+                   ? e\n
+                   : f;`,
+      parserOptions: {ecmaVersion: 7},
+      errors: [
+        {
+          message: 'bad ternary formatting',
+          type: 'VariableDeclaration'
+        }
+      ],
+      output: 'const a =\n  b ? c :\n  d ? e :\n  f;'
     },
     {
       code: badCode,
