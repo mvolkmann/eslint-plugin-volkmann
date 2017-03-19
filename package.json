@@ -18,8 +18,10 @@
   "bugs": {
     "url": "https://github.com/mvolkmann/eslint-plugin-volkmann/issues"
   },
-  "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-react": "^6.23.0",
     "eslint": "^3.16.1",
     "eslint-config-google": "^0.7.1",
     "eslint-find-rules": "^1.14.3",
